@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasanthakumar Pazhanisamy | Senior Software Engineer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        /* Header & Nav */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #e0f2fe 0%, #fff 100%);
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin: 0.5rem auto 0;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .skill-list span {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        /* Experience & Projects */
+        .timeline-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-header h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+        }
+
+        .timeline-header .date {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .project-details ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+
+        .project-details li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .contact a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .about-grid {
+                text-align: left;
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Vasanthakumar P.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Vasanthakumar Pazhanisamy</h1>
+            <h2>Senior Software Engineer</h2>
+            <p>Node.js Specialist | Backend Developer | API Architect</p>
+            <br>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <p>
+                I am a <strong>Senior Software Engineer</strong> with over <strong>4 years of diversified technical experience</strong>. 
+                I specialize in <strong>Node.js and Javascript technologies</strong>, with extensive exposure to both waterfall and Agile methodologies.
+                
+            </p>
+            <p>
+                I possess a curious mind for learning new tools and sharing knowledge with my team. 
+                I have a strong track record of working with testers on complex projects throughout the end-to-end SDLC 
+                and handling incidents to ensure 24x7 system stability. 
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Core Stack</h3>
+                <div class="skill-list">
+                    <span>Node JS</span>
+                    <span>Javascript</span>
+                    <span>MySQL</span>
+                    <span>REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Secondary Skills</h3>
+                <div class="skill-list">
+                    <span>MongoDB</span>
+                    <span>C Programming</span>
+                    <span>HTML / CSS</span>
+                    <span>Z/OS</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Methods</h3>
+                <div class="skill-list">
+                    <span>Jira</span>
+                    <span>Proof Hub</span>
+                    <span>Git</span>
+                    <span>Agile / Waterfall</span>
+                    <span>HLD / LLD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Experience & Projects</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3>Senior Software Engineer @ GODB Technologies</h3>
+                <span class="date">Dec 2021 - Present</span>
+            </div>
+            <p>Chennai, India </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3>Project: TATA AIG General Insurance</h3>
+                <span class="date">Client: TATA AIG</span>
+            </div>
+            <div class="project-details">
+                <p><strong>Role:</strong> Full-Stack Development Lead (Partner Service REST API)</p>
+                <ul>
+                    <li>Architected scalable backend services using <strong>Node.js and Express.js</strong>.</li>
+                    <li>Implemented <strong>Role-Based Access Control (RBAC)</strong> for secure user management.</li>
+                    <li>Optimized MySQL queries to handle large-scale datasets and generate CSV reports.</li>
+                    <li>Implemented automated testing pipelines using <strong>Taiko</strong> to reduce regression testing.</li>
+                    <li>Provided production support to ensure high availability of the Insillion platform.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3>Project: SUD Life Insurance</h3>
+                <span class="date">Client: Star Union Dai-Ichi Life</span>
+            </div>
+            <div class="project-details">
+                <p><strong>Role:</strong> Senior Software Engineer</p>
+                <ul>
+                    <li>Engineered secure financial transaction workflows including 'Pay By Bank' gateways.</li>
+                    <li>Developed high-performance REST APIs and microservices for real-time data exchange.</li>
+                    <li>Reduced latency for client-facing apps through rigorous code profiling and query optimization.</li>
+                    <li>Designed modular User Management systems to streamline administrative workflows.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <h3>Bachelor of Engineering</h3>
+                <span class="date">2018 - 2022</span>
+            </div>
+            <p>Dhirajlal Gandhi College of Technology, Anna University</p>
+            <p><strong>Score:</strong> 79%</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>Open to opportunities in Software Engineering and Backend Development.</p>
+        <br>
+        <div style="margin-top: 1rem;">
+            <a href="mailto:vasanthakumarvk2000@gmail.com">vasanthakumarvk2000@gmail.com</a>
+            <span style="display:block; margin-top:10px;">+91-6379018783</span>
+            <span style="display:block; margin-top:10px;">Salem, Tamil Nadu, India</span>
+        </div>
+    </section>
+
+</body>
+</html>
